@@ -34,7 +34,20 @@ sudo apt-get install -yy git python3 python3-pip build-essential wget \
 # Install Python PIP Dependencies
 sudo -H pip3 install -r $requirement_url
 #khai add
+sudo apt-get install python3-pip
 sudo apt-get install python3-psycopg2
+sudo pip install babel==2.16.0
+sudo pip install passlib==1.7.4
+sudo pip install decorator==5.1.1
+sudo pip install polib==1.2.0
+sudo pip install psutil==6.1.0
+sudo pip install jinja2==3.1.4
+
+sudo pip install PyPDF2==1.26.0
+sudo pip install Werkzeug==2.0.2
+sudo pip install lxml==4.6.5
+sudo pip install docutils==0.14
+sudo pip install libsass==0.17.0
 # Install other required packages
 sudo apt-get install -yy  nodejs npm
 
