@@ -25,6 +25,10 @@ sudo apt-get install postgresql -yy
 # Create Odoo user for PostgreSQL
 sudo su - postgres -c "createuser -s $odoo_db_user" 2> /dev/null || true
 
+ls -l /etc/ssl/private/ssl-cert-snakeoil.key
+sudo chmod 0640 /etc/ssl/private/ssl-cert-snakeoil.key
+sudo service postgresql restart
+
 # Install Python Dependencies
 sudo apt-get install -yy git python3 python3-pip build-essential wget \
 	python3-dev python3-venv python3-wheel libxslt-dev libzip-dev \
@@ -48,6 +52,10 @@ sudo pip install Werkzeug==2.0.2
 sudo pip install lxml==4.6.5
 sudo pip install docutils==0.14
 sudo pip install libsass==0.17.0
+
+sudo pip install freezegun==1.5.1
+sudo pip install xlrd==2.0.1
+sudo pip install pyxlsb==1.0.10
 # Install other required packages
 sudo apt-get install -yy  nodejs npm
 
